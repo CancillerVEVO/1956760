@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11. Cobol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/prism.css" />
+    <link rel="stylesheet" href="/CSS/tareas5-22.css" />
+    <script defer src="vendor/prism.js"></script>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1 class="titulo">11. Cobol</h1>
+        <nav id="nav">
+          <a href="tarea10.html"><div id="back"></div></a>
+          <a href="index.html"><div id="menu"></div></a>
+          <a href="tarea12.html"><div id="next"></div></a>
+        </nav>
+      </header>
+      <div class="info">
+        <section>
+          <p>
+            El lenguaje COBOL (acrónimo de COmmon Business-Oriented Language,
+            Lenguaje Común Orientado a Negocios) fue creado en el año 1959 con
+            el objetivo de crear un lenguaje de programación universal que
+            pudiera ser usado en cualquier ordenador y que estuviera orientado
+            principalmente a los negocios, es decir, a la llamada informática de
+            gestión.
+          </p>
+          <br />
+          <p>
+            <i>Simbolos: </i> En la última revisión se introdujo la programación
+            orientada a objetos, llamada OO-COBOL. OO-COBOL conserva todas las
+            ventajas de versiones anteriores, y además:
+            <li>Funciones definidas por el usuario.</li>
+            <li>Orientación a objetos.</li>
+            <li>Caracteres UNICODE</li>
+            <li>Múltiples símbolos de moneda.</li>
+            <li>
+              Localización (hablamos de adpataciones del código por país).
+            </li>
+            <li>Punteros.</li>
+            <li>Validación de datos</li>
+            <li>Tipos de datos binario y flotante</li>
+            <li>Tipos de datos definidos por el usuario.</li>
+          </p>
+          <p>
+            <i>Sintaxís</i> Las variables tienen que definirse al detalle, Hace
+            falta especificar e total de dígitos que se van a usar, incluida la
+            posición del dígito decimal. Cobol es simple, porque no utiliza
+            cosas como punteros, funciones definidas por el usuario o tipos
+            definidos Esto hace que pueda parecer limitado, pero fomenta un
+            estilo de programación sencillo y directo.
+          </p>
+          <br />
+          <p>
+            <i>Esqueleto del Programa: </i>
+            <br />
+            Un programa COBOL consta de divisiones:
+            <ol>
+            <li>Programa</li>
+            <li>Divisiones</li>
+            <li>Sección</li>
+            <li>Párrafos</li>
+            <li>Oraciones</li>
+            <li>Declaraciones</li>
+            <li>Personajes</li>
+            </ol>
+          </p>
+          <br />
+          <p>
+            <i>Aplicacion a descargar para ejecutar: </i>
+            <li>GNU Cobol (antiguo Open COBOL, que es Open Source)</li>
+            <li>Raincode COBOL</li>
+            <li>COBOL-IT</li>
+          </p>
+          <br />
+          <p><i>Paradigma: </i> imperativo</p>
+          <h2>Uso en consola</h2>
+          <pre>
+            <code class="language-bash">
+$ SET SOURCEFORMAT"FREE"</code>
+          </pre>
+        </section>
+        <h2>Ejemplo</h2>
+        <pre>
+          <code class="language-cobol">
+            IDENTIFICATION DIVISION.
+PROGRAM-ID.  Iteration-If.
+AUTHOR.  Michael Coughlan.
+
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01  Num1           PIC 9  VALUE ZEROS.
+01  Num2           PIC 9  VALUE ZEROS.
+01  Result         PIC 99 VALUE ZEROS.
+01  Operator       PIC X  VALUE SPACE.
+
+PROCEDURE DIVISION.
+Calculator.
+    PERFORM 3 TIMES
+       DISPLAY "Enter First Number      : " WITH NO ADVANCING
+       ACCEPT Num1
+       DISPLAY "Enter Second Number     : " WITH NO ADVANCING
+       ACCEPT Num2
+       DISPLAY "Enter operator (+ or *) : " WITH NO ADVANCING
+       ACCEPT Operator
+       IF Operator = "+" THEN
+          ADD Num1, Num2 GIVING Result
+       END-IF
+       IF Operator = "*" THEN
+          MULTIPLY Num1 BY Num2 GIVING Result
+       END-IF
+       DISPLAY "Result is = ", Result
+    END-PERFORM.
+    STOP RUN.
+          </code>
+        </pre>
+      </div>
+    </article>
+  </body>
+</html>

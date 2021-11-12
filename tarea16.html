@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>16. Conversión de Temperatura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/prism.css" />
+    <link rel="stylesheet" href="/CSS/tareas5-22.css" />
+    <script defer src="vendor/prism.js"></script>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1 class="titulo">16. Conversión de Temperatura JAVA</h1>
+        <nav id="nav">
+          <a href="tarea15.html"><div id="back"></div></a>
+          <a href="index.html"><div id="menu"></div></a>
+          <a href="tarea17.html"><div id="next"></div></a>
+        </nav>
+      </header>
+      <div class="info">
+        <section>
+          <p>
+            Elabore un programa en JAVA que mediante un menu de opciones permita
+            calcular la conversion de escala de temperatura:
+          </p>
+          <br />
+          <ul>
+            <li>
+              <p>1. De grados Celsius a grados Farenheit</p>
+              <br />
+            </li>
+            <li>
+              <p>2. De grados Farenheit a grados Celsius</p>
+              <br />
+            </li>
+            <li>
+              <p>
+                (NOTA: El cuadro de dialogo para selecciona que sea usando
+                botones: °C -&gt; °F y otro °F -&gt; °C)
+              </p>
+            </li>
+          </ul>
+        </section>
+        <h2>código</h2>
+        <pre>
+          <code class="language-java">
+import javax.swing.JOptionPane;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Tarea16 {
+    public static void main(String[] args) {
+        String title = "Conversion de Temperatura", prompt = "Grados";
+        String[] options = { "°C->°F", "°F->°C", "Salir" };
+
+        JPanel panel = new JPanel();
+        panel.add(new JLabel(prompt + ": "));
+        JTextField textField = new JTextField(10);
+        panel.add(textField);
+
+        int i = JOptionPane.showOptionDialog(null, panel, title, JOptionPane.YES_NO_CANCEL_OPTION,
+                JOptionPane.PLAIN_MESSAGE, null, options, null);
+
+        String message = textField.getText();
+        double result = 0.0;
+
+        if (message.isEmpty())
+            return;
+        result = Double.parseDouble(message);
+
+        switch (i) {
+        case 0:
+            result = (result - 9.0 / 5.0) + 32;
+            message = result + "°F";
+            break;
+        case 1:
+            result = (result - 32) * 5.0 / 9.0;
+            message = result + "°C";
+            break;
+        default:
+            return;
+        }
+
+        JOptionPane.showMessageDialog(null, message, options[i], JOptionPane.PLAIN_MESSAGE);
+    }
+}
+
+          </code>
+        </pre>
+      </div>
+    </article>
+  </body>
+</html>

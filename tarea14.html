@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>14. SQL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/prism.css" />
+    <link rel="stylesheet" href="/CSS/tareas5-22.css" />
+    <script defer src="vendor/prism.js"></script>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1 class="titulo">14. SQL</h1>
+        <nav id="nav">
+          <a href="tarea13.html"><div id="back"></div></a>
+          <a href="index.html"><div id="menu"></div></a>
+          <a href="tarea15.html"><div id="next"></div></a>
+        </nav>
+      </header>
+      <div class="info">
+        <section>
+          <p>
+            Por sus siglas en inglés "Structured Query Language"; en español
+            lenguaje de consulta estructurada. es un lenguaje de dominio
+            específico, diseñado para administrar, y recuperar información de
+            sistemas de gestión de bases de datos relacionales.2​ Una de sus
+            principales características es el manejo del álgebra y el cálculo
+            relacional para efectuar consultas con el fin de recuperar, de forma
+            sencilla, información de bases de datos, así como realizar cambios
+            en ellas.
+          </p>
+          <br />
+          <p>
+            <i>Símbolos: </i>
+            <li>Operadores aritméticos</li>
+            <li>Operadores Relacionales</li>
+            <li>Operadores de asignación</li>
+            <li>Operadores de resolución de ámbito</li>
+            <li>Operadores bit a bit</li>
+            <li>Operadores de conjuntos (EXCEPT e INTERSECT, y UNION)</li>
+            <li>Operadores de comparación</li>
+            <li>Operador de concatenación de cadenas</li>
+            <li>Operadores compuestos</li>
+            <li>Operadores unarios</li>
+            <li>Operadores lógicos</li>
+          </p>
+          <br />
+          <p>
+            <i>Síntaxis: </i> Las sentencias SQL no son sensibles a mayúsculas y
+            minúsculas, es decir, 'SELECT' y 'select' son dos palabras iguales
+            para SQL. Algunos sistemas de bases de datos necesitan un punto y
+            coma después de cada sentencia SQL para ejecutarse correctamente.
+            Este punto y coma también puede servir para separar una sentencia
+            SQL de otra sentencia SQL en la misma línea.
+            <br />
+            Las sentencias SQL se pueden agrupar por funcionalidades:
+            <li>Lenguaje de definición de datos (DDL).</li>
+            <li>Lenguaje de manipulación de datos (DML).</li>
+            <li>Lenguaje de control de datos (DCL).</li>
+          </p>
+          <br />
+          <p><i>Aplicacion a descargar para ejecutar: </i>MySQL</p>
+          <br />
+          <br />
+          <p><i>Paradigma: </i> Multiparadigma</p>
+        </section>
+        <h2>ejemplo</h2>
+        <pre>
+          <code class="language-sql">
+# CREATE TABLE Empleado
+(
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Nombre VARCHAR(50),
+Apellido VARCHAR(50),
+Direccion VARCHAR(255),
+Ciudad VARCHAR(60),
+Telefono VARCHAR(15),
+Peso VARCHAR (5),
+Edad (2),
+Actividad Específica (100),
+idCargo INT
+)
+          </code>
+        </pre>
+      </div>
+    </article>
+  </body>
+</html>

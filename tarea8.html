@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8. Haskell</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/prism.css" />
+    <link rel="stylesheet" href="/CSS/tareas5-22.css" />
+    <script defer src="vendor/prism.js"></script>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1 class="titulo">8. Haskell</h1>
+        <nav id="nav">
+          <a href="tarea7.html"><div id="back"></div></a>
+          <a href="index.html"><div id="menu"></div></a>
+          <a href="tarea9.html"><div id="next"></div></a>
+        </nav>
+      </header>
+      <div class="info">
+        <section>
+          <p>
+            Haskell es un lenguaje de programación estandarizado multi-propósito
+            puramente funcional con semánticas no estrictas y fuerte
+            tipificación estática. Su nombre se debe al lógico estadounidense
+            Haskell Curry, debido a su aportación al cálculo lambda, el cual
+            tiene gran influencia en el lenguaje.
+          </p>
+          <br />
+          <p>
+            <i>Símbolos: </i>
+            <li>Operadores Matematicos</li>
+            <li>Funciones de Comparación Aritmetica</li>
+            <li>Funciones para manipular listas</li>
+            <li>Funciones de Comparación</li>
+            <li>Funciones Booleanas</li>
+            <li>Funciones de Evaluación</li>
+            <li>Controles de Flujo</li>
+            <li>Funciones de Entrada y Salida</li>
+          </p>
+          <br />
+          <p>
+            <i>Sintaxís: </i> A diferencia de los operadores, las funciones se
+            utilizan en notación prefija, es decir, el nombre de la función se
+            coloca antes de sus parámetros. Los nombres de las funciones sólo
+            pueden contener caracteres normales, es decir, letras, dígitos,
+            comillas y subrayados. El primer carácter de un identificador de
+            función no puede ser una letra mayúscula ni un dígito. También es
+            posible aplicar parcialmente una función, sin suministrarle todos
+            sus parámetros. Esto genera una nueva función, que puede utilizarse
+            como otra función cualquiera. Esta facilidad es especialmente útil
+            en presencia de orden superior.
+          </p>
+          <br />
+          <p>
+            <i>Esqueleto de los programas: </i> La estructura de un programa de
+            haskell es sorprendentemente simple. Tienes un main función que hace
+            IO, y eso es todo. En general, los programas están estructurados
+            como funciones puras que hacen el cómputo real junto con partes
+            discretas del código que tratan con el IO. (Por supuesto hay
+            excepciones a esto, pero la idea general de escribir tanto código
+            puro como sea posible es bastante universal). Como casi todo se
+            expresa como un montón de funciones puras, no se pasan variables
+            entre ellas las funciones se comunican pasando argumentos.
+          </p>
+          <br />
+          <p><i>Compilador: </i> The Glasgow Haskell Compiler (ghc)</p>
+          <br />
+          <p>
+            <i>Paradigma: </i> Funcional, no estricto, modular, fuertemente
+            tipificado
+          </p>
+          <h2>Uso en consola</h2>
+          <pre><code class="language-bash">$ ghc tarea8.hs</code></pre>
+        </section>
+        <h2>Ejemplo</h2>
+        <pre>
+          <code class="language-haskell">
+import System.Info
+
+main = do
+    print os
+    print arch
+    print compilerName
+    print compilerVersion
+          </code>
+        </pre>
+      </div>
+    </article>
+  </body>
+</html>

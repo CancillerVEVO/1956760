@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7. Scheme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/prism.css" />
+    <link rel="stylesheet" href="/CSS/tareas5-22.css" />
+    <script defer src="vendor/prism.js"></script>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1 class="titulo">7. Scheme</h1>
+        <nav id="nav">
+          <a href="tarea6.html"><div id="back"></div></a>
+          <a href="index.html"><div id="menu"></div></a>
+          <a href="tarea8.html"><div id="next"></div></a>
+        </nav>
+      </header>
+      <div class="info">
+        <section>
+          <p>
+            Scheme es un lenguaje funcional y un dialecto de Lisp. Fue
+            desarrollado por Guy L. Steele y Gerald Jay Sussman en la década de
+            los setenta e introducido en el mundo académico a través de una
+            serie de artículos conocidos como los Lambda Papers de Sussman y
+            Steele. La filosofía de Scheme es minimalista.
+          </p>
+          <br />
+          <p>
+            <i>Símbolos: </i>
+            <li>Operadores Matematicos</li>
+            <li>Funciones de Comparación Aritmetica</li>
+            <li>Funciones para manipular listas</li>
+            <li>Funciones de Comparación</li>
+            <li>Funciones Booleanas</li>
+            <li>Funciones de Evaluación</li>
+            <li>Controles de Flujo</li>
+            <li>Funciones de Entrada y Salida</li>
+          </p>
+          <br />
+          <p>
+            <i>Sintaxís: </i> Scheme posee una sintaxis reducida comparada a
+            otros lenguajes. Utiliza la notación prefija. Los paréntesis son
+            obligatorios, ya que separan las instrucciones que serán evaluadas
+            por el intérprete. Las variables son dinámicamente tipadas. Dicho de
+            otra forma, no se debe especificar lo que se va a guardar dentro de
+            la misma. Las variables globales se nombran con la instrucción
+            (define nombre valor). Por otro lado, las variables locales se
+            definen con la instrucción ( let variables función)
+          </p>
+          <br />
+          <p>
+            <i>Esqueleto de los programas: </i> Las listas son la estructura de
+            datos básica del lenguaje, que también ofrece arrays entre sus tipos
+            predefinidos. Debido a su especificación minimalista, no hay
+            sintaxis explícita para crear registros o estructuras, o para
+            programación orientada a objetos, pero muchas implementaciones
+            ofrecen dichas funcionalidades.
+          </p>
+          <br />
+          <p><i>Compilador: </i> MIT/GNU Scheme (mit-scheme)</p>
+          <br />
+          <p><i>Paradigma: </i> multi-paradigma; funciona, imperativo, meta</p>
+          <h2>Uso en consola</h2>
+          <p>
+            Leer
+            <a
+              href="https://groups.csail.mit.edu/mac/ftpdir/scheme-7.4/doc-html/user_3.html"
+              target="_blank"
+              >manual</a
+            >
+          </p>
+        </section>
+        <h2>Ejemplo</h2>
+        <pre>
+          <code class="language-scheme">
+(define (fact n)
+  (if (= n 1)
+      1
+      (* n (fact (- n 1)))))
+          </code>
+        </pre>
+      </div>
+    </article>
+  </body>
+</html>

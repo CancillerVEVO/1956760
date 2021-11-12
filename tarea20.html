@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20. Búsqueda en Matriz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/prism.css" />
+    <link rel="stylesheet" href="/CSS/tareas5-22.css" />
+    <script defer src="vendor/prism.js"></script>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1 class="titulo">20. Búsqueda en Matriz JAVA</h1>
+        <nav id="nav">
+          <a href="tarea19.html"><div id="back"></div></a>
+          <a href="index.html"><div id="menu"></div></a>
+          <a href="tarea21.html"><div id="next"></div></a>
+        </nav>
+      </header>
+      <div class="info">
+        <section>
+          <p>
+            Elabore un programa en JAVA que, al recibir como datos un arreglo
+            bidimensional de NxM elementos de tipo entero y un numero entero,
+            determine cuantas veces se encuentra este numero dentro del arreglo.
+            Ademas que imprima la matriz al final.
+          </p>
+        </section>
+        <h2>código</h2>
+        <pre>
+          <code class="language-java">
+import javax.swing.JOptionPane;
+
+public class Tarea20 {
+    public static void main(String[] args) {
+        String title = "Busqueda en Matriz";
+        String[] sizeStr = JOptionPane
+                .showInputDialog(null, "Dimension de matriz(NxM):", title, JOptionPane.PLAIN_MESSAGE).split("x");
+        int n = Integer.parseInt(sizeStr[0]), m = Integer.parseInt(sizeStr[1]);
+
+        String[] matLines = new String[m];
+        int[][] matrix = new int[n][m];
+
+        for (int i = 0; i < n; ++i) {
+            matLines[i] = JOptionPane.showInputDialog(null,
+                    "Fila " + (i + 1) + "/" + n + " (escribir elementos separados por un espacio):", title,
+                    JOptionPane.PLAIN_MESSAGE);
+            String[] elements = matLines[i].split(" ");
+            for (int j = 0; j < m; ++j)
+                matrix[i][j] = Integer.parseInt(elements[j]);
+        }
+
+        int element = Integer
+                .parseInt(JOptionPane.showInputDialog(null, "Elemento a buscar:", title, JOptionPane.PLAIN_MESSAGE));
+
+        int found = 0;
+
+        for (int i = 0; i < n; ++i)
+            for (int j = 0; j < m; ++j)
+                if (matrix[i][j] == element)
+                    found += 1;
+
+        String message = "";
+
+        if (found == 0)
+            message = "Elemento " + element + " no fue encontrado.";
+        else
+            message = "Elemento " + element + " fue encontrado " + found + " veces.";
+
+        message += "\n";
+
+        message += String.join("\n", matLines);
+
+        JOptionPane.showMessageDialog(null, message, title, JOptionPane.PLAIN_MESSAGE);
+    }
+}
+</code>
+        </pre>
+      </div>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>18. Serie A</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/prism.css" />
+    <link rel="stylesheet" href="/CSS/tareas5-22.css" />
+    <script defer src="vendor/prism.js"></script>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1 class="titulo">18. Serie A</h1>
+        <nav id="nav">
+          <a href="tarea17.html"><div id="back"></div></a>
+          <a href="index.html"><div id="menu"></div></a>
+          <a href="tarea19.html"><div id="next"></div></a>
+        </nav>
+      </header>
+      <div class="info">
+        <section>
+          <p>
+            Elabore un programa en JAVA que calcule e imprima la siguiente serie
+            para los N primeros terminos.
+          </p>
+          <br />
+          <ul>
+            <li>
+              <p>1 , 8 , 243 , 16384 , 1953125, ...</p>
+            </li>
+          </ul>
+        </section>
+        <h2>código</h2>
+        <pre>
+          <code class="language-java">
+import javax.swing.JOptionPane;
+
+public class Tarea18 {
+    public static void main(String[] args) {
+        int n = Integer.parseInt(JOptionPane.showInputDialog("N"));
+        if (n <= 0)
+            return;
+
+        String message = "", s;
+
+        for (int i = 1; i <= n; ++i) {
+            Double a = Math.pow(i, 2 * i - 1);
+            message += a;
+
+            s = ", ";
+            if (i == n)
+                s = "";
+
+            message += s;
+
+            if (i % 10 == 0 && i != n)
+                message += "\n";
+        }
+
+        JOptionPane.showMessageDialog(null, message);
+    }
+}
+
+          </code>
+        </pre>
+      </div>
+    </article>
+  </body>
+</html>

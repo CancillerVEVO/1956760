@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>21. Suma de Matrices</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/prism.css" />
+    <link rel="stylesheet" href="/CSS/tareas5-22.css" />
+    <script defer src="vendor/prism.js"></script>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1 class="titulo">21. Suma de Matrices JAVA</h1>
+        <nav id="nav">
+          <a href="tarea20.html"><div id="back"></div></a>
+          <a href="index.html"><div id="menu"></div></a>
+          <a href="tarea22.html"><div id="next"></div></a>
+        </nav>
+      </header>
+      <div class="info">
+        <section>
+          <p>
+            Elabore un programa en JAVA que calcule la suma de dos matrices que
+            ingrese el usuario.
+          </p>
+          <br />
+          <ul>
+            <li>
+              <p>(NOTA: Validar lo que sea necesario)</p>
+            </li>
+          </ul>
+        </section>
+        <h2>código</h2>
+        <pre>
+          <code class="language-java">
+import javax.swing.JOptionPane;
+
+public class Tarea21 {
+    public static void main(String[] args) {
+        String title = "Suma de Matrices";
+        String[] sizeStr = JOptionPane
+                .showInputDialog(null, "Dimension de matrices(NxM):", title, JOptionPane.PLAIN_MESSAGE).split("x");
+        int n = Integer.parseInt(sizeStr[0]), m = Integer.parseInt(sizeStr[1]), matNo = Integer.parseInt(
+                JOptionPane.showInputDialog(null, "Numero de matrices a sumar: ", title, JOptionPane.PLAIN_MESSAGE));
+
+        String[][] matLines = new String[matNo][m];
+        int[][][] matrix = new int[matNo][n][m];
+        int[][] sum = new int[n][m];
+
+        for (int i = 0; i < matNo; ++i) {
+            for (int j = 0; j < n; ++j) {
+                matLines[i][j] = JOptionPane.showInputDialog(null,
+                        "Matriz: " + (i + 1) + "/" + matNo + ", Fila: " + (j + 1) + "/" + n, title,
+                        JOptionPane.PLAIN_MESSAGE);
+                String[] row = matLines[i][j].split(" ");
+                for (int k = 0; k < m; ++k)
+                    matrix[i][j][k] = Integer.parseInt(row[k]);
+            }
+        }
+
+        for (int i = 0; i < matNo; ++i)
+            for (int j = 0; j < n; ++j)
+                for (int k = 0; k < m; ++k)
+                    sum[j][k] += matrix[i][j][k];
+
+        String message = "";
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < m; ++j)
+                message += sum[i][j] + " ";
+            message += "\n";
+        }
+
+        JOptionPane.showMessageDialog(null, message, title, JOptionPane.PLAIN_MESSAGE);
+    }
+}
+
+          </code>
+        </pre>
+      </div>
+    </article>
+  </body>
+</html>

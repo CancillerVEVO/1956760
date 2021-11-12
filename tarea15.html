@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15. Ruby</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/prism.css" />
+    <link rel="stylesheet" href="/CSS/tareas5-22.css" />
+    <script defer src="vendor/prism.js"></script>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1 class="titulo">15. Ruby</h1>
+        <nav id="nav">
+          <a href="tarea14.html"><div id="back"></div></a>
+          <a href="index.html"><div id="menu"></div></a>
+          <a href="tarea16.html"><div id="next"></div></a>
+        </nav>
+      </header>
+      <div class="info">
+        <section>
+          <p>
+            Ruby es un lenguaje de programación interpretado, reflexivo y
+            orientado a objetos. Combina una sintaxis inspirada en Python y Perl
+            con características de programación orientada a objetos similares a
+            Smalltalk. Comparte también funcionalidad con otros lenguajes de
+            programación como Lisp, Lua, Dylan y CLU. Ruby es un lenguaje de
+            programación interpretado en una sola pasada y su implementación
+            oficial es distribuida bajo una licencia de software libre
+          </p>
+          <br />
+          <p>
+            <i>Símbolos: </i>
+            <li>Operadores aritmeticos</li>
+            <li>Operadores de asignación</li>
+            <li>Operadores bit a bit</li>
+            <li>Operadores de Comparación</li>
+            <li>Operadores de control de errores</li>
+            <li>Operadores de Ejecucion</li>
+            <li>Operadored de incremento / decremento</li>
+            <li>Operadores lógicos</li>
+            <li>Operadores para strings</li>
+            <li>Operadores para Arrays</li>
+            <li>Operadores de tipo</li>
+          </p>
+          <br />
+          <p>
+            <i>Síntaxis: </i>
+            La sintaxis de Ruby es similar a la de Perl o Python. La definición
+            de clases y métodos está definida por palabras clave. Sin embargo,
+            en Perl, las variables no llevan prefijos. Cuando se usa, un prefijo
+            indica el ámbito de las variables. La mayor diferencia con C y Perl
+            es que las palabras clave son usadas para definir bloques de código
+            sin llaves. Los saltos de línea son significativos y son
+            interpretados como el final de una sentencia; el punto y coma tiene
+            el mismo uso. A diferencia de Python, la sangría no es
+            significativa.
+          </p>
+          <br />
+          <p>
+            <i>Esqueleto de los programas: </i> En Ruby todo es considerado un
+            objeto… desde un integer hasta un string. Todos los objetos tienen
+            métodos predeterminados. Los métodos son el termino de ruby para
+            funciones. Para usar un método uno tiene que poner un punto después
+            del objeto y después seguir con el nombre del método. Algunos
+            métodos como puts y gets están en todos lados y no necesitan estar
+            asociados con un objeto.
+          </p>
+          <br />
+          <p>
+            <i>Aplicacion a descargar para ejecutar: </i>
+            <a href="https://www.ruby-lang.org/en/downloads/"
+              >Puedes descargar Ruby desde aquí</a
+            >
+          </p>
+          <br />
+          <br />
+          <p>
+            <i>Paradigma: </i> multiparadigma: orientado a objetos, reflexivo
+          </p>
+          <h2>uso de consola</h2>
+          <pre>
+            <code class="language-bash">
+$ $ ruby tarea15.rb
+            </code>
+          </pre>
+        </section>
+        <h2>ejemplo</h2>
+        <pre>
+          <code class="language-ruby">
+# Programa para hallar el factorial de un número
+# Guarda este programa como fact.rb
+
+def fact(n)
+  if n == 0
+    1
+  else
+    n * fact(n-1)
+  end
+end
+
+print fact(ARGV[0].to_i), "\n"
+          </code>
+        </pre>
+      </div>
+    </article>
+  </body>
+</html>

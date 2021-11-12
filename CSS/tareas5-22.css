@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Georgia, "Nimbus Roman No9 L", "Century Schoolbook L", serif;
+  font-size: 20px;
+  line-height: 1.45;
+  color: black;
+
+  overflow-x: hidden;
+}
+
+article {
+  max-width: 35em;
+  margin: 0 auto;
+  padding: 2em 1em 5em;
+  word-wrap: break-word;
+}
+
+header {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+#nav {
+  display: flex;
+  align-items: flex-end;
+  padding: 5px;
+  height: auto;
+  margin-left: auto;
+  gap: 0.2em;
+}
+
+#back {
+  width: 0;
+  height: 0;
+  border-top: 0.5em solid transparent;
+  border-right: 1em solid #b8b8b8;
+  border-bottom: 0.5em solid transparent;
+  border-radius: 20%;
+}
+#back:hover {
+  border-right: 1em solid #979393;
+}
+#menu {
+  width: 1em;
+  height: 1em;
+  background: #b8b8b8;
+  border-radius: 50%;
+}
+#menu:hover {
+  background: #979393;
+}
+#next {
+  width: 0;
+  height: 0;
+  border-top: 0.5em solid transparent;
+  border-left: 1em solid #b8b8b8;
+  border-bottom: 0.5em solid transparent;
+  border-radius: 20%;
+}
+#next:hover {
+  border-left: 1em solid #979393;
+}
+.titulo {
+  font-family: "Cinzel", Georgia, serif;
+}
+
+.info {
+  padding: 0 1em 1em 1em;
+  margin: 1em;
+}
+
+pre {
+  font-size: 0.9rem !important;
+}
+
+.info ul {
+  list-style: none;
+}
+
+.info h2,
+.info h3 {
+  font-weight: bold;
+  margin: 1.6rem 0;
+  font-family: "Cinzel", Georgia, serif;
+}
+
+.info h2 {
+  font-size: 1.5rem;
+}
+
+.info h3 {
+  font-size: 1.2rem;
+}
+
+.info {
+  text-align: justify;
+}
+
+li {
+  margin: 1em;
+}

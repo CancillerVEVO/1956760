@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13. PHP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/prism.css" />
+    <link rel="stylesheet" href="/CSS/tareas5-22.css" />
+    <script defer src="vendor/prism.js"></script>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1 class="titulo">13. PHP</h1>
+        <nav id="nav">
+          <a href="tarea12.html"><div id="back"></div></a>
+          <a href="index.html"><div id="menu"></div></a>
+          <a href="tarea14.html"><div id="next"></div></a>
+        </nav>
+      </header>
+      <div class="info">
+        <section>
+          <p>
+            PHP es un lenguaje de programación de uso general que se adapta
+            especialmente al desarrollo web. Fue creado inicialmente por el
+            programador danés-canadiense Rasmus Lerdorf en 1994. El código PHP
+            suele ser procesado en un servidor web por un intérprete PHP
+            implementado como un módulo, un daemon o como un ejecutable de
+            interfaz de entrada común (CGI). En un servidor web, el resultado
+            del código PHP interpretado y ejecutado —que puede ser cualquier
+            tipo de datos, como el HTML generado o datos de imágenes binarias
+          </p>
+          <br />
+          <p>
+            <i>Símbolos: </i>
+            <li>Operadores aritmeticos</li>
+            <li>Operadores de asignación</li>
+            <li>Operadores bit a bit</li>
+            <li>Operadores de Comparación</li>
+            <li>Operadores de control de errores</li>
+            <li>Operadores de Ejecucion</li>
+            <li>Operadored de incremento / decremento</li>
+            <li>Operadores lógicos</li>
+            <li>Operadores para strings</li>
+            <li>Operadores para Arrays</li>
+            <li>Operadores de tipo</li>
+          </p>
+          <br />
+          <p>
+            <i>Síntaxis: </i> Su sintaxis es similar a la de los lenguajes de C,
+            Java, Perl, etc.
+          </p>
+          <br />
+          <p>
+            <i>Esqueleto de los programas</i> Un archivo PHP normalmente suele
+            contener HTML y trozos de código PHP.
+          </p>
+          <br />
+          <p><i>Aplicacion a descargar para ejecutar: </i>phpStorm</p>
+          <br />
+          <p>
+            <i>Paradigma: </i> Multiparadigma: imperativo, funcional, orientado
+            a objetos, procedural, reflexivo
+          </p>
+          <h2>uso de consola</h2>
+          <pre>
+            <code class="language-bash">
+$ php tarea13.php
+            </code>
+          </pre>
+        </section>
+        <h2>ejemplo</h2>
+        <pre>
+          <code class="language-php">
+&lt;?php
+if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== FALSE) {
+?>
+&lt;h3>strpos() debe haber devuelto no falso&lt;/h3>
+&lt;p>Está usando Internet Explorer&lt;/p>
+&lt;?php
+} else {
+?>
+&lt;h3>strpos() debe haber devuelto falso&lt;/h3>
+&lt;p>No está usando Internet Explorer&lt;/p>
+&lt;?php
+}
+?>        </code>
+        </pre>
+      </div>
+    </article>
+  </body>
+</html>

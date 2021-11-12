@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10. Gödel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/prism.css" />
+    <link rel="stylesheet" href="/CSS/tareas5-22.css" />
+    <script defer src="vendor/prism.js"></script>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1 class="titulo">10. Gödel</h1>
+        <nav id="nav">
+          <a href="tarea9.html"><div id="back"></div></a>
+          <a href="index.html"><div id="menu"></div></a>
+          <a href="tarea11.html"><div id="next"></div></a>
+        </nav>
+      </header>
+      <div class="info">
+        <section>
+          <p>
+            Gödel es un lenguaje de programación declarativo, de propósito
+            general, adherido al paradigma de la programación lógica. Es un
+            lenguaje fuertemente tipado, con un sistema de tipos basado en
+            many-sorted logic con polimorfismo parametrizado. Se le dio ese
+            nombre en honor al lógico Kurt Gödel.
+          </p>
+          <br />
+          <p><i>Aplicacion a descargar para ejecutar: </i> SICStus Prolog</p>
+          <p><i>Paradigma: </i> declarativo, logico.</p>
+          <br />
+          <p>
+            <i>Diseñadores: </i> Antony Bowers y John Lloyd en la University of
+            Bristol, tambien Pat Hill en la University of Leeds.
+          </p>
+          <br />
+        </section>
+        <h2>Ejemplo de Código</h2>
+        <pre>
+          <code class="language-gödel">
+            MODULE      MCD.
+IMPORT      Integers.
+ 
+PREDICATE   Mcd : Integer * Integer * Integer.
+Mcd(i,j,d) <- 
+           DivisorComun(i,j,d) &
+           ~ SOME [e] (DivisorComun(i,j,e) & e > d).
+ 
+PREDICATE   DivisorComun : Integer * Integer * Integer.
+DivisorComun(i,j,d) <-
+           IF (i = 0 \/ j = 0)
+           THEN
+             d = Max(Abs(i),Abs(j))
+           ELSE
+             1 =< d =< Min(Abs(i),Abs(j)) &
+             i Mod d = 0 &
+             j Mod d = 0.
+          </code>
+        </pre>
+      </div>
+    </article>
+  </body>
+</html>

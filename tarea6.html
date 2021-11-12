@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6. Python</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/prism.css" />
+    <link rel="stylesheet" href="/CSS/tareas5-22.css" />
+    <script defer src="vendor/prism.js"></script>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1 class="titulo">6. Python</h1>
+        <nav id="nav">
+          <a href="tarea5.html"><div id="back"></div></a>
+          <a href="index.html"><div id="menu"></div></a>
+          <a href="tarea7.html"><div id="next"></div></a>
+        </nav>
+      </header>
+      <div class="info">
+        <section>
+          <p>
+            Python es un lenguaje de programación interpretado cuya filosofía
+            hace hincapié en una sintaxis que favorezca un código legible. Se
+            trata de un lenguaje de programación multiparadigma, ya que soporta
+            orientación a objetos, programación imperativa y, en menor medida,
+            programación funcional.
+          </p>
+          <br />
+          <p>
+            <i>Símbolos: </i>
+            <li>Variables</li>
+            <li>Constantes</li>
+            <li>Diferentes tipos de datos (strings, ints, bools, etc)</li>
+            <li>Operadores Aritméticos</li>
+            <li>Operadores</li>
+            <li>Comentarios</li>
+            <li>Tipos de datos complejos (Tuplas, listas, diccionarios)</li>
+          </p>
+          <br />
+          <p>
+            <i>Sintaxís: </i> <br />
+            Palabras reservadas: <br /><br />
+            <strong
+              >and, assert, break, class, continue, def, del, elif, else,
+              except, exec, finally, for, from, global, if, imoort, in, is,
+              lambda, not, or, pass, print, raise, return, try, while, with,
+              yield.</strong
+            >
+            <br />
+            <br />
+            Las funciones se definen con "def" <br />
+            No se necesita una palabra reservada para declarar una variable ni
+            indicar el tipo de dato
+          </p>
+          <br />
+          <p>
+            <i>Esqueleto de los programas: </i> No hace falta comenzar con
+            ninguna palabra reservada ni función en particular, tampoco hace
+            falta poner punto y coma (;) al final de cada línea. Simplemente con
+            escribir un par de líneas ya tenemos un programa en Python
+          </p>
+          <br />
+          <p><i>Interpretador: </i> python</p>
+          <br />
+          <p>
+            <i>Paradigma: </i> Multiparadigma: orientado a objetos, imperativo,
+            funcional, reflexivo
+          </p>
+          <h2>Uso en consola</h2>
+          <pre><code class="language-bash">$ python tarea6.py</code></pre>
+        </section>
+        <h2>Ejemplo</h2>
+        <pre>
+          <code class="language-python">
+def factorial(x):
+assert x >= 0 and x % 1 == 0, "x debe ser un entero mayor o igual a 0."
+if x == 0:
+    return 1
+else:
+    return x * factorial(x - 1)
+
+print("10! =", factorial(10))   
+          </code>
+        </pre>
+      </div>
+    </article>
+  </body>
+</html>

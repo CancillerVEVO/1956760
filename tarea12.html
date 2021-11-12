@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12. Ada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/prism.css" />
+    <link rel="stylesheet" href="/CSS/tareas5-22.css" />
+    <script defer src="vendor/prism.js"></script>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1 class="titulo">12. Ada</h1>
+        <nav id="nav">
+          <a href="tarea11.html"><div id="back"></div></a>
+          <a href="index.html"><div id="menu"></div></a>
+          <a href="tarea13.html"><div id="next"></div></a>
+        </nav>
+      </header>
+      <div class="info">
+        <section>
+          <p>
+            Ada Fue diseñado con la seguridad en mente y con una filosofía
+            orientada a la reducción de errores comunes y difíciles de
+            descubrir. Para ello se basa en un tipado muy fuerte y en chequeos
+            en tiempo de ejecución (desactivables en beneficio del rendimiento).
+            La sincronización de tareas se realiza mediante la primitiva
+            rendezvous.
+          </p>
+          <br />
+          <p>
+            <i>Símbolos:</i>
+            <br />
+            Se pueden encontrar en Ada los siguientes componentes léxicos:
+            <li>Identificadores</li>
+            <li>Literales numericos</li>
+            <li>Literales de Tipo caracter</li>
+            <li>Cadenas de caracteres</li>
+            <li>Delimitadores</li>
+            <li>Comentarios</li>
+            <li>Palabras reservadas</li>
+          </p>
+          <br />
+          <p>
+            <i>Sintaxís: </i>
+            inspirada en Pascal, es bastante legible incluso para personas que
+            no conozcan el lenguaje. ... En Ada, todo el programa es un único
+            procedimiento, que puede contener subprogramas (procedimientos o
+            funciones). Cada sentencia se cierra con end qué_cerramos. Es un
+            modo de evitar errores y facilitar la lectura
+          </p>
+          <br />
+          <p>
+            <i>Esqueleto de los programas: </i>
+            Un programa en Ada consta de al menos dos partes: una cláusula de
+            contexto y un procedimiento principal. Las cláusulas de contexto
+            sirven para especificar el uso de librerías externas al programa. El
+            procedimiento principal es el punto de arranque del programa, del
+            que dependen en última instancia, todos los demás procedimientos y
+            funciones que se utilicen
+          </p>
+          <br />
+          <p>
+            <i
+              >Aplicacion a descargar para ejecutar: nvim, vim, emacs, notepad,
+              etc
+            </i>
+          </p>
+          <br />
+          <p><i>Compilador: </i>GNAT</p>
+          <br />
+          <p><i>Paradigma: </i> Orientado a objetos, imperativo</p>
+          <br />
+          <h2>Uso de Consola</h2>
+          <pre>
+            <code class="language-bash">
+$ gcc -c tarea12.ads
+            </code>
+          </pre>
+        </section>
+        <h2>Ejemplo</h2>
+        <pre>
+          <code class="language-ada">
+--
+-- Simple array example.
+--
+with Gnat.Io; use Gnat.Io;
+procedure Arr1 is
+   A: array(1..5) of Integer;   -- Array subscripts 1 to 5.
+   I: Integer;
+begin
+   -- Read 'em in.
+   for I in 1..5 loop
+      Put("> ");
+      Get(A(I));
+   end loop;
+
+   -- Put 'em out in reverse order.
+   Put("[");
+   for I in reverse A'Range loop
+      Put(A(I));
+      if I > A'First then
+         Put(' ');
+      end if;
+   end loop;
+   Put_Line("]");
+end Arr1;
+          </code>
+        </pre>
+      </div>
+    </article>
+  </body>
+</html>

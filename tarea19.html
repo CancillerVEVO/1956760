@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>19. Búsqueda en Vector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/prism.css" />
+    <link rel="stylesheet" href="/CSS/tareas5-22.css" />
+    <script defer src="vendor/prism.js"></script>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1 class="titulo">19. Búsqueda en Vector JAVA</h1>
+        <nav id="nav">
+          <a href="tarea18.html"><div id="back"></div></a>
+          <a href="index.html"><div id="menu"></div></a>
+          <a href="tarea20.html"><div id="next"></div></a>
+        </nav>
+      </header>
+      <div class="info">
+        <section>
+          <p>
+            Elabore un programa en JAVA que realice una busqueda de un numero en
+            un vector, mostrando solamente un mensaje indicando cuantas veces
+            aparecio el numero. Ademas de imprimir el vector.
+          </p>
+        </section>
+        <h2>código</h2>
+        <pre>
+          <code class="language-java">
+import javax.swing.JOptionPane;
+
+public class Tarea19 {
+    public static void main(String[] args) {
+        String title = "Busqueda en Vector";
+        int size = Integer
+                .parseInt(JOptionPane.showInputDialog(null, "Tamaño del vector: ", title, JOptionPane.PLAIN_MESSAGE));
+        String vecStr = JOptionPane.showInputDialog(null, "Vector(escribir cada elemento separado por un espacio): ",
+                title, JOptionPane.PLAIN_MESSAGE);
+        int element = Integer
+                .parseInt(JOptionPane.showInputDialog(null, "Elemento a buscar: ", title, JOptionPane.PLAIN_MESSAGE));
+
+        String[] tmp = vecStr.split(" ");
+
+        int[] vector = new int[size];
+        for (int i = 0; i < size; ++i)
+            vector[i] = Integer.parseInt(tmp[i]);
+
+        int found = 0;
+        for (int i = 0; i < size; ++i)
+            if (vector[i] == element)
+                found += 1;
+
+        String message = "";
+        if (found == 0)
+            message = "Elemento " + element + " no fue encontrado.";
+        else
+            message = "Elemento " + element + " fue encontrado " + found + " veces.";
+        message += "\nVector: " + vecStr;
+
+        JOptionPane.showMessageDialog(null, message, title, JOptionPane.PLAIN_MESSAGE);
+    }
+}    
+          </code>
+        </pre>
+      </div>
+    </article>
+  </body>
+</html>

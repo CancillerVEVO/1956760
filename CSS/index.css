@@ -1,0 +1,44 @@
+body {
+  font-family: Georgia, "Nimbus Roman No9 L", "Century Schoolbook L", serif;
+  font-size: 20px;
+  line-height: 1.45;
+  color: black;
+}
+
+.titulo {
+  font-family: "Cinzel", Georgia, serif;
+}
+
+article {
+  display: flex;
+  margin: 0 2em;
+  flex-wrap: wrap;
+  max-width: none;
+}
+#portada {
+  flex-basis: 480px;
+  max-width: 35em;
+  flex-grow: 1;
+  margin-right: 3em;
+}
+#portada img {
+  width: 400px;
+  border: 1px solid black;
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.4);
+}
+
+#contenido {
+  flex-basis: 500px;
+  flex-grow: 1;
+  max-width: 35em;
+}
+ol li {
+  margin: 0 0 0 40px;
+  padding: 0;
+}
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #467;
+}
