@@ -107,6 +107,9 @@ figure figcaption {
 li {
   list-style: none;
 }
-p i {
+i {
+  font-weight: bold;
+}
+.info i {
   font-weight: bold;
 }
